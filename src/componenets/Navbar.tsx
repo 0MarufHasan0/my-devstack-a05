@@ -38,7 +38,7 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end gap-5">
-    <a className="btn border-none">Sign In</a>
+    <a className="btn border-none text-[#334155]">Sign In</a>
     <a className="btn rounded-xl text-[#FFFF] bg-[#D91B7E]">Sign Up</a>
   </div>
 </div>
