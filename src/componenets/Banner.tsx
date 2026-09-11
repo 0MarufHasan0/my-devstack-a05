@@ -3,7 +3,7 @@ import BannerImage from "../assets/banner-stack.png"
 const Banner = () => {
     return (
         <div>
-           <div className="hero bg-base-200 min-h-screen">
+           <div className="hero bg-base-200 px-4 py-10">
   <div className="hero-content w-full flex-col-reverse  lg:flex-row-reverse lg:justify-around">
     <img
     src={BannerImage}
