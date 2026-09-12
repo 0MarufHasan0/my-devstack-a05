@@ -5,6 +5,7 @@ import Navbar from "./componenets/Navbar"
 import Technologies from "./componenets/technologies/Technologies"
 import type { Technology } from "./type/Type"
 import ReactLoader from "./componenets/ReactLoader"
+import Footer from "./componenets/Footer"
 
 
 
@@ -33,6 +34,8 @@ function App() {
   <Technologies dataPromise ={dataPromise} />
   
   </Suspense>
+
+  <Footer/>
    
     </>
   )

@@ -34,7 +34,7 @@ const Technologies = ({dataPromise}:TechnologiesProps) => {
         technologiesData.map((technology , index)=> {
             return (
 
-     <TechnologiesCard key={index} technology={technology} />
+     <TechnologiesCard   key={index} technology={technology} addedStack = {addedStack } setAddedStack = {setAddedStack} />
             
             )
         })
@@ -47,7 +47,7 @@ const Technologies = ({dataPromise}:TechnologiesProps) => {
 
 <div className="bg-base-300 p-10 lg:col-span-2">
 
- <Stack/>
+ <Stack addedStack = {addedStack } setAddedStack = {setAddedStack} />
 
 </div>
 

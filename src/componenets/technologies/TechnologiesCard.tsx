@@ -5,14 +5,22 @@ import { FaStar } from "react-icons/fa";
 import { toast } from "react-toastify";
 
 
+
 interface TechnologyCardProps {
     technology : Technology
+    addedStack : Technology []
+    setAddedStack :  React.Dispatch<React.SetStateAction<Technology[]>>
+    
 }
 
-const TechnologiesCard = ({technology}:TechnologyCardProps) => {
+const TechnologiesCard = ({technology , addedStack , setAddedStack}:TechnologyCardProps) => {
 
     // Button Click 
 const [button , setButton] = useState<boolean>(false)
+
+// After remove from StackCard
+
+const isAdded:boolean = addedStack.some ((Stack )=> Stack.name === technology.name)
 
 // State handle
 const handleButton = () => {
@@ -26,14 +34,19 @@ const handleButton = () => {
    draggable: true,
    progress: undefined,
   theme: "light",
+
+ 
 });
+
+setAddedStack([...addedStack , technology])
+
 }
 
     // console.log(technology ,"tech")
     return (
         <div>
 
-    <div className= {`"card w-96 ${button ? "border-2 border-red-500" : "bg-base-100 shadow-sm"}`}>
+    <div className= {`"card w-96 ${isAdded ? "border-2 border-red-500" : "bg-base-100 shadow-sm"}`}>
   <div className="card-body">
 
     {/* Icon and Badge */}
@@ -76,11 +89,11 @@ const handleButton = () => {
 
       onClick={handleButton}
       
-      disabled={button}
+      disabled={isAdded}
       className={`btn btn-neutral btn-block `}>
         
         
-        {button ? "Added to stack" : "Add to stack"}
+        {isAdded ? "Added to stack" : "Add to stack"}
       
       
       </button>
