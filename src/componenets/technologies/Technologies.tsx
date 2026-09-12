@@ -1,6 +1,17 @@
+import {  use, useState } from "react";
+import type { Technology } from "../../type/Type";
+import TechnologiesCard from "./TechnologiesCard";
+import Stack from "./Stack";
 
+ interface TechnologiesProps{
+    dataPromise : Promise<Technology[]>
+ }
 
-const Technologies = () => {
+const Technologies = ({dataPromise}:TechnologiesProps) => {
+
+     const [addedStack ,setAddedStack] = useState<Technology[]>([])
+
+    const technologiesData = use(dataPromise)
     return (
         // Heeding Section
         <div className="container mx-auto px-4 py-10">
@@ -15,13 +26,28 @@ const Technologies = () => {
 
 
 
-<div className="display grid  grid-cols-12  mt-10">
+<div className="display grid  lg:grid-cols-12  mt-10">
 
-    <div className="bg-amber-300 h-[500px] col-span-10">
+<div className="grid lg:col-span-10 gap-5  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
 
-    </div>
+    {
+        technologiesData.map((technology , index)=> {
+            return (
 
-<div className="bg-red-300 h-[500px] col-span-2">
+     <TechnologiesCard key={index} technology={technology} />
+            
+            )
+        })
+    }
+
+
+
+
+</div>
+
+<div className="bg-base-300 p-10 lg:col-span-2">
+
+ <Stack/>
 
 </div>
 
