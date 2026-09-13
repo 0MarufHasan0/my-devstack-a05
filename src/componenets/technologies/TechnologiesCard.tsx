@@ -1,5 +1,4 @@
 
-import { useState } from "react";
 import type { Technology } from "../../type/Type";
 import { FaStar } from "react-icons/fa";
 import { toast } from "react-toastify";
@@ -15,8 +14,8 @@ interface TechnologyCardProps {
 
 const TechnologiesCard = ({technology , addedStack , setAddedStack}:TechnologyCardProps) => {
 
-    // Button Click 
-const [button , setButton] = useState<boolean>(false)
+//     // Button Click 
+// const [button , setButton] = useState<boolean>(false)
 
 // After remove from StackCard
 
@@ -24,8 +23,29 @@ const isAdded:boolean = addedStack.some ((Stack )=> Stack.name === technology.na
 
 // State handle
 const handleButton = () => {
-    setButton(!button)
-   toast.success(`${technology.name} Successfully Added`, {
+
+//     setButton(!button)
+//    toast.success(`${technology.name} Successfully Added`, {
+//    position: "top-center",
+//    autoClose: 5000,
+//    hideProgressBar: false,
+//    closeOnClick: false,
+//     pauseOnHover: true,
+//    draggable: true,
+//    progress: undefined,
+//   theme: "light",
+
+ 
+// });
+
+if(isAdded){
+  toast.info(`${technology.name} already added!`)
+  return;
+}
+
+setAddedStack([...addedStack , technology])
+
+ toast.success(`${technology.name} Successfully Added`, {
    position: "top-center",
    autoClose: 5000,
    hideProgressBar: false,
@@ -38,7 +58,6 @@ const handleButton = () => {
  
 });
 
-setAddedStack([...addedStack , technology])
 
 }
 
@@ -89,8 +108,9 @@ setAddedStack([...addedStack , technology])
 
       onClick={handleButton}
       
-      disabled={isAdded}
-      className={`btn btn-neutral btn-block `}>
+      // disabled={isAdded}
+
+      className={`btn  btn-block ${isAdded ? "btn-disable cursor-not-allowed" : "btn-neutral"}`}>
         
         
         {isAdded ? "✓ Added to Stack" : "Add to stack"}
