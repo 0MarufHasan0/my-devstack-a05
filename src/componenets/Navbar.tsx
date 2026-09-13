@@ -23,7 +23,7 @@ const Navbar = () => {
 
     {/* Logo */}
     <div className="md:mr-0 mr-6">
-    <img src={Logo} alt="logo"  />
+    <img src={Logo} alt="logo" className="w-30 sm:w-36"  />
   </div>
 
   </div>
@@ -38,8 +38,8 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end gap-5">
-    <a className="btn border-none text-[#334155]">Sign In</a>
-    <a className="btn rounded-xl text-[#FFFF] bg-[#D91B7E]">Sign Up</a>
+    <a className="btn border-none text-sm sm:text-base text-[#334155]">Sign In</a>
+    <a className="btn rounded-xl text-sm sm:text-base text-[#FFFF] bg-[#D91B7E]">Sign Up</a>
   </div>
 </div>
             

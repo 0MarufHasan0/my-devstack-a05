@@ -34,7 +34,7 @@ const Technologies = ({dataPromise}:TechnologiesProps) => {
         technologiesData.map((technology , index)=> {
             return (
 
-     <TechnologiesCard   key={index} technology={technology} addedStack = {addedStack } setAddedStack = {setAddedStack} />
+     <TechnologiesCard  key={index} technology={technology} addedStack = {addedStack } setAddedStack = {setAddedStack} />
             
             )
         })
