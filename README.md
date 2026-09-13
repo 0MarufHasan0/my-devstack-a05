@@ -69,3 +69,4 @@ Dev Stack
 ---
 ### 7. How do you pass data from a parent component to a child component, and how does a child send something back to the parent?
 **Ans :** I can pass data passed from a parent component to a child component using props . Props allow us to send data parent to child and The child can send something back to parent using a function through a props
+---
