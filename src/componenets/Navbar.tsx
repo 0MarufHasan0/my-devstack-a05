@@ -22,7 +22,7 @@ const Navbar = () => {
     </div>
 
     {/* Logo */}
-    <div>
+    <div className="md:mr-0 mr-6">
     <img src={Logo} alt="logo"  />
   </div>
 
