@@ -58,7 +58,7 @@ const Stack = ({addedStack, setAddedStack}:StackProps) => {
 
             {addedStack.length > 0 && 
 
-            <button onClick={handleRemoveAll}  className="btn mt-10 btn-error w-full">
+            <button onClick={handleRemoveAll}  className="btn mt-10 bg-linear-to-r rounded-xl from-[#FF5722] to-[#D81B7E] text-[#FFFF] w-full">
 
                 Remove All
                 

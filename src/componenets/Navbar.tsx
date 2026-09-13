@@ -2,7 +2,7 @@ import Logo from "../assets/logo-text.png"
 
 const Navbar = () => {
     return (
-        <div className=" bg-base-100 shadow-sm">
+        <div className=" bg-base-100 shadow-sm sticky top-0 z-30">
 
             <div className="navbar container mx-auto px-4"> 
   <div className="navbar-start">

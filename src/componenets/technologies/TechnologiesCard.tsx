@@ -93,7 +93,7 @@ setAddedStack([...addedStack , technology])
       className={`btn btn-neutral btn-block `}>
         
         
-        {isAdded ? "Added to stack" : "Add to stack"}
+        {isAdded ? "✓ Added to Stack" : "Add to stack"}
       
       
       </button>
